@@ -14,8 +14,5 @@ attr_reader :name, :life
     @life -= 10
   end
 
-  def attack(player)
-    player.take_on_damage
-  end
 
 end

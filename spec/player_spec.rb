@@ -10,21 +10,11 @@ describe Player do
     end
   end
 
-  describe "#life" do
-
-  end
-
   describe "#take_on_damage" do
     it '2.0 reduces players life by 10%' do
       expect{player.take_on_damage}.to change{player.life}.by(-Player::DEFAULT_DAMAGE)
     end
   end
 
-  describe "#attack" do
-    it 'calls take on damage method in opponent' do
-      expect(player2).to receive(:take_on_damage)
-      player.attack(player2)
-    end
-  end
 
 end

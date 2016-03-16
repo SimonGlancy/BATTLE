@@ -11,20 +11,16 @@ enable :sessions
   end
 
   post '/names' do
-    $player1 = Player.new(params[:player1])
-    $player2 = Player.new(params[:player2])
+    $game = Game.new(params[:player1],params[:player2])
     redirect '/play'
   end
 
   get '/play' do
-    $player1
-    $player2
     erb :play
   end
 
   get '/attack' do
-    $player1
-    $player2
+    $game.attack($attacked_player)
     erb(:attack)
   end
 
