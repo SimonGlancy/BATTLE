@@ -19,16 +19,23 @@ enable :sessions
   end
 
   get '/play' do
+    redirect '/game_over' if $game.players[0].dead?
+    redirect '/game_over' if $game.players[1].dead?
     @player1 = $game.players[0].name
     @player2 = $game.players[1].name
-    erb :play
+    erb (:play)
   end
 
   get '/attack' do
+
     @player1 = $game.players[0].name
     @player2 = $game.players[1].name
     $game.attack
     erb(:attack)
+  end
+
+  get '/game_over' do
+    erb(:game_over)
   end
 
   # start the server if ruby file executed directly

@@ -14,5 +14,9 @@ attr_reader :name, :life
     @life -= 10
   end
 
+  def dead?
+    @life == 0
+  end
+
 
 end
