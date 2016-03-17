@@ -5,16 +5,15 @@ class Game
 attr_reader :player1, :player2, :attacked_player
 
 
-  def initialize(player1, player2, player_class: Player)
-    @player_class = player_class
-    @player1 = @player_class.new(player1)
-    @player2 = @player_class.new(player2)
+  def initialize(player1, player2)
+    @player1 =player1
+    @player2 = player2
     @attacked_player = @player2
   end
 
-  def attack(player)
-    player.take_on_damage
-    #change_atackee
+  def attack
+    @attacked_player.take_on_damage
+    change_attackee
   end
 
   def change_attackee
