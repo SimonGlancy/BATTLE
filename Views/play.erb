@@ -1,6 +1,6 @@
 <h1> "<%= @player1 %> VS <%= @player2 %> - GAME ON!!!" </h1>
-<h2> <%= @player1 %> LIFE : <%= $game.player1.life %>% </h2>
-<h2> <%= @player2 %> LIFE : <%= $game.player2.life %>% </h2>
+<h2> <%= @player1 %> LIFE : <%= $game.players[0].life %>% </h2>
+<h2> <%= @player2 %> LIFE : <%= $game.players[1].life %>% </h2>
 
 <form action="/attack">
 <input type='submit' value='Attack'>

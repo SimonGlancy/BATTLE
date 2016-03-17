@@ -19,14 +19,14 @@ enable :sessions
   end
 
   get '/play' do
-    @player1 = $game.player1.name
-    @player2 = $game.player2.name
+    @player1 = $game.players[0].name
+    @player2 = $game.players[1].name
     erb :play
   end
 
   get '/attack' do
-    @player1 = $game.player1.name
-    @player2 = $game.player2.name
+    @player1 = $game.players[0].name
+    @player2 = $game.players[1].name
     $game.attack
     erb(:attack)
   end

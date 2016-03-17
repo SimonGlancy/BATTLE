@@ -11,12 +11,12 @@ describe Game do
       expect(player2).to receive(:take_on_damage)
       game.attack
     end
-  end
 
-  describe "#change_attackee" do
+
     it 'changes the attackee' do
-      game.change_attackee
-      expect(game.attacked_player).to be player1
+      allow(player2).to receive(:take_on_damage)
+      game.attack
+      expect(game.flipper[0]).to be player2
     end
   end
 end
