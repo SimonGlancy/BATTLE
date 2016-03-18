@@ -6,6 +6,13 @@ def sign_in_and_play
 end
 
 def first_attack
+  srand(122)
   click_button 'Attack'
+  click_link 'Back To Play'
+end
+
+def tickle
+  srand(122)
+  click_button 'Tickle'
   click_link 'Back To Play'
 end

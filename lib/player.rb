@@ -9,8 +9,9 @@ class Player
   end
 
   def deduct
-    @points -= DEDUCT_POINTS
+    @points -= rand(0..DEDUCT_POINTS)
   end
+
 
   def dead?
     @points <= 0

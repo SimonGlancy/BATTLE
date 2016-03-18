@@ -20,6 +20,7 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
+    @attack = params[:attack]
     @game = Game.current_game
     @game.attack
     erb :attack

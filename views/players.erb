@@ -3,7 +3,8 @@
 <html style='font-family: futura;'>
 <h1><%= @game.player1.name %> vs <%= @game.player2.name %> Song Battle</h1>
 <h2><%= @game.player1.name %> has <%= @game.player1.points %> hit-points and <%= @game.player2.name %> has <%= @game.player2.points %> hit-points.</h2>
-<form action='/attack'>
-  <input type='submit' value='Attack'>
+<form action='/attack' method='get'>
+  <input type='submit' name='attack' value='Attack'> <input type='submit' name='attack' value='Tickle'>
 </form>
+
 </html>
